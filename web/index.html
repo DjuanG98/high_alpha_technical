@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <base href="/">
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="A new Flutter project.">
+  <meta name="google-signin-client_id" content="779206091279-g709oak0878cp7jcevgk9tr62rs22umk.apps.googleusercontent.com"/>
+  <!-- iOS meta tags & icons -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="high_alpha_technical">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png"/>
+
+  <title>high_alpha_technical</title>
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-firestore.js"></script>
+      <script>
+        var firebaseConfig = {
+            apiKey: "AIzaSyCiL-w_Ih81GBi2JkWzYmROTk8x4m1IAtU",
+            authDomain: "technical-assestment.firebaseapp.com",
+            projectId: "technical-assestment",
+            storageBucket: "technical-assestment.appspot.com",
+            messagingSenderId: "140189162437",
+            appId: "1:140189162437:web:213a0c835ff402b14809ac"
+          };
+          // Initialize Firebase
+          firebase.initializeApp(firebaseConfig);
+        </script>
+        <script>
+        if ('serviceWorker' in navigator) {
+          window.addEventListener('load', function () {
+            navigator.serviceWorker.register('flutter_service_worker.js');
+          });
+        }
+      </script>
+      <script src="main.dart.js" type="application/javascript"></script>
+</body>
+</html>
