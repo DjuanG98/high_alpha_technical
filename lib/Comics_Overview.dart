@@ -11,9 +11,10 @@ final FirebaseAuth auth = FirebaseAuth.instance;
 Future<ComicModel> comicModel;
 
 int count;
+int comic_num;
 
 Future<ComicModel> getComic() async{
-  final response = await http.get(Uri.https('xkcd.com', 'info.0.json'));
+  final response = await http.get(Uri.https('xkcd.com/','info.0.json'));
 
   if (response.statusCode == 200){
     return ComicModel.fromJson(jsonDecode(response.body));
@@ -110,6 +111,7 @@ class _ComicsOverview extends State<ComicsOverview> {
                               snapshot.data.safe_title, style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
                             ) ,
                             subtitle: Text(
+                              'Comic Number: ' + snapshot.data.num.toString() + '\n' + 'Date: ' +
                               snapshot.data.month + '/'  + snapshot.data.day + '/' + snapshot.data.year, style: TextStyle(fontSize: 15),
                             ),
                             leading: ConstrainedBox(
